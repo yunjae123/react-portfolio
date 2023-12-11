@@ -47,12 +47,13 @@ function Project({ title, description, tags, imageUrl }: ProjectProps) {
         group-hover:-translate-x-3
         group-hover:translate-y-3
         group-hover:-rotate-2
-        group-even:-right[initial] 
-        group-even:-left-40
         
         group-even:group-hover:translate-x-3
         group-even:group-hover:translate-y-3
-        group-even:group-hover:rotate-2"
+        group-even:group-hover:rotate-2
+        
+        group-even:-right[initial] 
+        group-even:-left-40"
       />
     </section>
   );
