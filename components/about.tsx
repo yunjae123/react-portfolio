@@ -8,12 +8,12 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function About() {
   const { ref, inView } = useInView({
-    threshold: 0.9,
+    threshold: 0.95,
   });
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
   useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
+    if (inView && Date.now() - timeOfLastClick > 500) {
       setActiveSection("About");
     }
   }, [inView, setActiveSection, timeOfLastClick]);

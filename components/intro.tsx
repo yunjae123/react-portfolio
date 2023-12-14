@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 
 export default function Intro() {
   const { ref, inView } = useInView({
-    threshold: 0.4,
+    threshold: 0.5,
   });
   const { setActiveSection } = useActiveSectionContext();
 

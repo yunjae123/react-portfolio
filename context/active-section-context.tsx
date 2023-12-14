@@ -30,6 +30,7 @@ export default function ActiveSectionContextProvider({
         activeSection,
         setActiveSection,
         timeOfLastClick,
+        setTimeOfLastClick,
       }}
     >
       {children}
