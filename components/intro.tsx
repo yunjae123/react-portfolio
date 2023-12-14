@@ -1,16 +1,30 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import { useActiveSectionContext } from "@/context/active-section-context";
+import { motion } from "framer-motion";
 
 export default function Intro() {
+  const { ref, inView } = useInView({
+    threshold: 0.4,
+  });
+  const { setActiveSection } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Home");
+    }
+  }, [inView, setActiveSection]);
+
   return (
     <section
+      ref={ref}
       id="home"
       className="scroll-mt-[100rem] mb-28 max-w-[50rem] text-center sm:mb-0"
     >
