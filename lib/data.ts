@@ -98,11 +98,11 @@ export const skillsData = [
   "MongoDB",
   "Redux",
   "GraphQL",
+  "Python",
   "Flask",
   "Apollo",
   "Express",
   "PostgreSQL",
-  "Python",
   "Django",
   "Framer Motion",
 ] as const;
